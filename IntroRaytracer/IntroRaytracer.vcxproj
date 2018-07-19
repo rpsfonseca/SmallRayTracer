@@ -153,17 +153,17 @@
     <ClCompile Include="src\scene.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="geometry\Object.h" />
-    <ClInclude Include="geometry\Sphere.h" />
-    <ClInclude Include="Hit.h" />
-    <ClInclude Include="Lambert.h" />
-    <ClInclude Include="Material.h" />
-    <ClInclude Include="math\Math.h" />
-    <ClInclude Include="math\vec3.h" />
-    <ClInclude Include="Metal.h" />
-    <ClInclude Include="ray.h" />
-    <ClInclude Include="scene.h" />
+    <ClInclude Include="include\Camera.h" />
+    <ClInclude Include="include\geometry\Object.h" />
+    <ClInclude Include="include\geometry\Sphere.h" />
+    <ClInclude Include="include\Hit.h" />
+    <ClInclude Include="include\Lambert.h" />
+    <ClInclude Include="include\Material.h" />
+    <ClInclude Include="include\maths\Math.h" />
+    <ClInclude Include="include\maths\vec3.h" />
+    <ClInclude Include="include\Metal.h" />
+    <ClInclude Include="include\ray.h" />
+    <ClInclude Include="include\scene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

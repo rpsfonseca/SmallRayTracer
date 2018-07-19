@@ -49,13 +49,13 @@ int main()
 
 	Camera camera = Camera();
 
-	std::ofstream outputFile("../resources/testImg.ppm");
+	std::ofstream outputFile("./resources/testImg.ppm");
 
 	Object* objectList[4];
 	objectList[0] = new Sphere(Vector3(0, 0, -1), 0.5f, new Lambert(Vector3(0.8, 0.3, 0.3)));
 	objectList[1] = new Sphere(Vector3(0, -100.5, -1), 100, new Lambert(Vector3(0.8, 0.8, 0.0)));
-	objectList[2] = new Sphere(Vector3(1, 0, -1), 0.5f, new Metal(Vector3(0.8, 0.6, 0.2)));
-	objectList[3] = new Sphere(Vector3(-1, 0, -1), 0.5f, new Metal(Vector3(0.8, 0.8, 0.8)));
+	objectList[2] = new Sphere(Vector3(1, 0, -1), 0.5f, new Metal(Vector3(0.8, 0.6, 0.2), 0.3));
+	objectList[3] = new Sphere(Vector3(-1, 0, -1), 0.5f, new Metal(Vector3(0.8, 0.8, 0.8), 1.0));
 
 	for (int i = 0; i < 4; i++)
 	{
@@ -85,9 +85,5 @@ int main()
 	}
 	outputFile.close();
 
-	for (int i = 0; i < 4; i++)
-	{
-		delete objectList[i];
-	}
 	return 0;
 }
