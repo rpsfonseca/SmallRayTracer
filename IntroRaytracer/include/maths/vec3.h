@@ -10,7 +10,7 @@ struct Vector3
 	Vector3(float _x, float _y, float _z) : x(_x), y(_y), z(_z) {};
 
 	float sqLength() const { return x*x + y*y + z*z; }
-	float length() const { return sqrtf(x*x + y*y + z*z); }
+	float length() const { return sqrt(x*x + y*y + z*z); }
 	void normalize() { float k = 1.0f / length(); x *= k; y *= k; z *= k; }
 
 	Vector3 operator-() const { return Vector3(-x,-y,-z); }

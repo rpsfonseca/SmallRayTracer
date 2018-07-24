@@ -44,11 +44,15 @@ Vector3 getColor(const Ray& r, int depth)
 
 int main()
 {
-	int nx = 600;
-	int ny = 300;
-	int numOfSamples = 100;
+	int nx = 1200;
+	int ny = 800;
+	int numOfSamples = 10;
 
-	Camera camera = Camera(Vector3(-2,2,1), Vector3(0,0,-1), Vector3(0,1,0), 20, float(nx)/float(ny));
+	Vector3 camPos = Vector3(3, 3, 2);
+	Vector3 lookAt = Vector3(0, 0, -1);
+	float distance = (camPos - lookAt).length();
+
+	Camera camera(camPos, lookAt, Vector3(0,1,0), 20, float(nx)/float(ny), 2.0, distance);
 
 	std::ofstream outputFile("./resources/testImg.ppm");
 
