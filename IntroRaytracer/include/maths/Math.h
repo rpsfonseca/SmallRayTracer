@@ -6,6 +6,8 @@
 
 namespace maths
 {
+	const double PI = 3.14;
+
 	inline double generateRand01()
 	{
 		return ((double)rand() / (RAND_MAX));

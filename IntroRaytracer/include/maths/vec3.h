@@ -28,6 +28,7 @@ inline Vector3 operator*(const Vector3& a, const Vector3& b) { return Vector3(a.
 inline Vector3 operator*(const Vector3& b, float a) { return Vector3(a*b.x,a*b.y,a*b.z); }
 inline Vector3 operator*(float a, const Vector3& b) { return Vector3(a*b.x,a*b.y,a*b.z); }
 
-inline Vector3 normalize(const Vector3& v) { float k = 1.0f / v.length(); return Vector3(v.x * k, v.y * k, v.z * k); }
+inline Vector3 cross(const Vector3& v1, const Vector3& v2) { return Vector3(v1.y * v2.z - v1.z*v2.y, -(v1.x*v2.z - v1.z*v2.x), v1.x*v2.y - v1.y*v2.x); }
 inline float dot(const Vector3& v1, const Vector3& v2) { return v1.x * v2.x + v1.y * v2.y + v1.z * v2.z;  }
+inline Vector3 normalize(const Vector3& v) { float k = 1.0f / v.length(); return Vector3(v.x * k, v.y * k, v.z * k); }
 inline Vector3 reflect(const Vector3& v, const Vector3& n) { return v - 2*dot(v,n)*n; }

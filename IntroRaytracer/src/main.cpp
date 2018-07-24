@@ -48,7 +48,7 @@ int main()
 	int ny = 300;
 	int numOfSamples = 100;
 
-	Camera camera = Camera();
+	Camera camera = Camera(Vector3(-2,2,1), Vector3(0,0,-1), Vector3(0,1,0), 20, float(nx)/float(ny));
 
 	std::ofstream outputFile("./resources/testImg.ppm");
 

@@ -13,6 +13,7 @@ private:
 
 public:
     Camera();
+	Camera(const Vector3& pos, const Vector3& lookAt, const Vector3& up, float fov, float aspectRatio);
     ~Camera();
 
     Ray getRay(float u, float v);
